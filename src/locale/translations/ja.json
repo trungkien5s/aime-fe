@@ -1,0 +1,9 @@
+{
+  "signin": {
+    "title": "ログイン",
+    "username": "ユーザー名",
+    "password": "パスワード",
+    "remember": "ログイン状態を保持する",
+    "button": "ログイン"
+  }
+}

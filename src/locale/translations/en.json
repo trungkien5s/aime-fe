@@ -1,0 +1,9 @@
+{
+  "signin": {
+    "title": "Sign In",
+    "username": "Username",
+    "password": "Password",
+    "remember": "Remember me",
+    "button": "Sign In"
+  }
+}

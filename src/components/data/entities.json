@@ -1,0 +1,180 @@
+{
+  "location": {
+    "display": "Location",
+    "entity": [
+      "location"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "word_sampling"
+    ]
+  },
+  "email": {
+    "display": "Email",
+    "entity": [
+      "email"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_email",
+      "mask_user_email",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "word_sampling"
+    ]
+  },
+  "age": {
+    "display": "Age",
+    "entity": [
+      "age"
+    ],
+    "operator": [
+      "mask_all_character",
+      "fake_number",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters"
+    ]
+  },
+  "money": {
+    "display": "Money",
+    "entity": [
+      "money"
+    ],
+    "operator": [
+      "mask_all_character",
+      "fake_number",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters"
+    ]
+  },
+  "phone": {
+    "display": "Phone",
+    "entity": [
+      "phone"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_phone",
+      "fake_phone",
+      "mask_n_first_characters",
+      "mask_n_last_characters",
+      "mask_character"
+    ]
+  },
+  "time": {
+    "display": "Time",
+    "entity": [
+      "time",
+      "timex"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "fake_date"
+    ]
+  },
+  "facility": {
+    "display": "Facility",
+    "entity": [
+      "facility"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "word_sampling"
+    ]
+  },
+  "address": {
+    "display": "Address",
+    "entity": [
+      "address"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_address",
+      "mask_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters"
+    ]
+  },
+  "postal_address": {
+    "display": "Postal Address",
+    "entity": [
+      "postal_address"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_postal_address",
+      "fake_postal_address",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "mask_character"
+    ]
+  },
+  "credit_card": {
+    "display": "Credit Card",
+    "entity": [
+      "visa_card",
+      "master_card",
+      "jcb_card",
+      "american_card",
+      "maestro"
+    ],
+    "operator": [
+      "mask_all_character",
+      "fake_number",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "mask_character"
+    ]
+  },
+  "url": {
+    "display": "URL",
+    "entity": [
+      "url"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_url",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "mask_character"
+    ]
+  },
+  "organization": {
+    "display": "Organization",
+    "entity": [
+      "ogranization"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "mask_character",
+      "word_sampling"
+    ]
+  },
+  "person": {
+    "display": "Person",
+    "entity": [
+      "person"
+    ],
+    "operator": [
+      "mask_all_character",
+      "mask_n_last_characters",
+      "mask_n_first_characters",
+      "mask_character",
+      "word_sampling"
+    ]
+  }
+}
