@@ -49,7 +49,8 @@ const SignInPage = () => {
             password: credentials.password,
         };
 
-        console.log("Calling API:", `${apiURL}/auth/login`);
+        console.log("API URL ===>", apiURL);
+        console.log("Calling API:", `${apiURL}/login`);
 
         // Create form data for x-www-form-urlencoded
         const formData = new URLSearchParams();

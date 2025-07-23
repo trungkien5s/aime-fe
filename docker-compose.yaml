@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  frontend:
+    build: .
+    container_name: aime-frontend
+    ports:
+      - "3000:80"
+    restart: unless-stopped
+    environment:
+      - REACT_APP_API_URL=http://backend:1234/api
+    depends_on:
+      - backend
+
+  backend:
+    image: aimemasking_be:latest
+    container_name: aime-backend
+    ports:
+      - "1234:1234"
+    restart: unless-stopped

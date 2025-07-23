@@ -50,10 +50,10 @@ const resources = {
             'time': 'Time',
             'facility': 'Facility',
             'address': 'Address',
-            'postal Address': 'Postal Address',
+            'postal_address': 'Postal Address',
             'credit Card': 'Credit Card',
-            'uRL': 'URL',
-            'organization': 'Organization',
+            'url': 'URL',
+            'ogranization': 'Organization',
             'person': 'Person',
             'entity Configuration': 'Entity Configuration',
 
@@ -169,19 +169,19 @@ const resources = {
                 'An error occurred.': 'エラーが発生しました。',
                 'Loading...': '読み込み中...',
 
-                'Location': '場所',
-                'Email': 'メール',
-                'Age': '年齢',
-                'Money': '金額',
-                'Phone': '電話',
-                'Time': '時間',
-                'Facility': '施設',
-                'Address': '住所',
-                'Postal Address': '郵便住所',
-                'Credit Card': 'クレジットカード',
-                'URL': 'URL',
-                'Organization': '組織',
-                'Person': '人物',
+                'location': '場所',
+                'email': 'メール',
+                'age': '年齢',
+                'money': '金額',
+                'phone': '電話',
+                'time': '時間',
+                'facility': '施設',
+                'address': '住所',
+                'postal_address': '郵便住所',
+                'credit card': 'クレジットカード',
+                'url': 'URL',
+                'ogranization': '組織',
+                'person': '人物',
                 'Entity Configuration': 'エンティティ構成',
 
 
@@ -240,7 +240,7 @@ const resources = {
 
     "Please ensure your file is not password protected": "ファイルにパスワードが設定されていないことを確認してください",
     "File Requirements": "ファイル要件",
-    "Maximum file size 1000 KB": "最大ファイルサイズ：1000 KB",
+    "Maximum file size": "最大ファイルサイズ",
     "None": "なし",
 
                 "Processing...": "処理中...",
@@ -290,7 +290,7 @@ const resources = {
                 "mask_number": "数値をマスク",
 
 
-
+                "You have selected many entities which may cause overlapping issues. Do you want to continue?":"多数のエンティティを選択しているため、重複の問題が発生する可能性があります。続行しますか？",
 
 
 
