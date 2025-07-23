@@ -11,6 +11,8 @@ services:
       - REACT_APP_API_URL=http://backend:1234/api
     depends_on:
       - backend
+    networks:
+      - aime-network
 
   backend:
     image: aimemasking_be:latest
@@ -18,3 +20,9 @@ services:
     ports:
       - "1234:1234"
     restart: unless-stopped
+    networks:
+      - aime-network
+
+networks:
+  aime-network:
+    driver: bridge
