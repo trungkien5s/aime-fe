@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a4e2c21-2738-4959-a39e-fe25b4707ac4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nginx.conf" beforeDir="false" afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/auth/AuthLayout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/auth/AuthLayout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/layout/userLayout/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/layout/userLayout/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/admin/dashboard/DashboardPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/admin/dashboard/DashboardPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/feature/EntityCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/feature/EntityCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/homepage/FeaturePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/homepage/FeaturePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +20,9 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/components/layout/userLayout/Header.js" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/src/pages/feature/EntitiesSection.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/feature/EntityCard.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/pages/homepage/FeaturePage.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -235,7 +233,7 @@
       <workItem from="1753262319859" duration="5322000" />
       <workItem from="1753322641639" duration="7408000" />
       <workItem from="1753345906751" duration="3371000" />
-      <workItem from="1753365601746" duration="1776000" />
+      <workItem from="1753365601746" duration="6623000" />
     </task>
     <servers />
   </component>

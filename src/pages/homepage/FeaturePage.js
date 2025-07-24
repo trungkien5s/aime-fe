@@ -24,6 +24,8 @@ const FeaturePage = ({ onProcess, className = "" }) => {
     const API_URL = process.env.REACT_APP_API_URL;
 
     // Fetch entities metadata from API
+    // Fetch entities metadata from API
+    // Fetch entities metadata from API
     const fetchEntitiesMeta = async () => {
         try {
             const token = localStorage.getItem("access_token");
@@ -32,11 +34,12 @@ const FeaturePage = ({ onProcess, className = "" }) => {
             });
             const data = await res.json();
             setEntitiesMeta(data?.entities || {});
-            // Init entity states
+
+            // Init entity states với giá trị mặc định là "mask_all_character"
             const initialEntities = {};
             Object.keys(data?.entities || {}).forEach((key) => {
                 initialEntities[key] = {
-                    maskType: "mask_all_character",
+                    maskType: "mask_all_character", // Đặt mặc định là "mask_all_character"
                     substitute: "",
                     start: "",
                     end: "",
@@ -85,7 +88,10 @@ const FeaturePage = ({ onProcess, className = "" }) => {
         Object.entries(entities).forEach(([entityKey, entity]) => {
             const { maskType, start, end, numberCharacter, substitute } = entity;
 
-            if (!maskType || maskType === "None") return;
+            // Kiểm tra nếu maskType là None thì bỏ qua entity này
+            if (!maskType || maskType === "None" || maskType === "") {
+                return; // Skip this entity completely
+            }
 
             const rule = { method: maskType };
 
@@ -108,9 +114,11 @@ const FeaturePage = ({ onProcess, className = "" }) => {
                 rule.substitute_character = substitute.trim();
             }
 
+            // Chỉ thêm vào selectedEntities nếu maskType không phải là None
             selectedEntities[entityKey] = rule;
         });
 
+        console.log('Selected entities for API:', selectedEntities); // Debug log
         return selectedEntities;
     };
 
