@@ -82,54 +82,38 @@ const FeaturePage = ({ onProcess, className = "" }) => {
     const getSelectedEntitiesForAPI = () => {
         const selectedEntities = {};
 
-        console.log('Current entities state:', entities); // Debug log
-        console.log('Entities meta:', entitiesMeta); // Debug log
+        Object.entries(entities).forEach(([entityKey, entity]) => {
+            const { maskType, start, end, numberCharacter, substitute } = entity;
 
-        Object.keys(entities).forEach(entityKey => {
-            const entity = entities[entityKey];
-            const entityMeta = entitiesMeta[entityKey];
+            if (!maskType || maskType === "None") return;
 
-            console.log(`Processing entity: ${entityKey}`, { entity, entityMeta }); // Debug log
+            const rule = { method: maskType };
 
-            if (entity.maskType && entity.maskType !== "None") {
-                // Build rule object based on the method
-                const rule = { method: entity.maskType };
+            // Xử lý theo từng loại mask
+            switch (maskType) {
+                case "mask_character":
+                    rule.start = parseInt(start) || 0;
+                    rule.end = parseInt(end) || 0;
+                    break;
 
-                // Handle parameters for different mask types
-                if (entity.maskType === "mask_character") {
-                    rule.start = parseInt(entity.start) || 0;
-                    rule.end = parseInt(entity.end) || 0;
-                } else if (entity.maskType === "mask_n_first_characters") {
-                    const num = parseInt(entity.numberCharacter);
-                    rule.number_character = isNaN(num) ? 1 : num;
-                } else if (entity.maskType === "mask_n_last_characters") {
-                    const num = parseInt(entity.numberCharacter);
-                    rule.number_character = isNaN(num) ? 1 : num;
-                }
-
-                // Add substitute character if provided
-                if (entity.substitute && entity.substitute.trim()) {
-                    rule.substitute_character = entity.substitute;
-                }
-
-                // Map to the actual entity key (not nested entity array)
-                // Based on the API structure, we use the entityKey directly
-                selectedEntities[entityKey] = { ...rule };
-                console.log(`Added rule for ${entityKey}:`, rule); // Debug log
+                case "mask_n_first_characters":
+                case "mask_n_last_characters":
+                    rule.number_character = parseInt(numberCharacter);
+                    if (isNaN(rule.number_character)) rule.number_character = 1;
+                    break;
             }
+
+            // Thêm ký tự thay thế nếu có
+            if (typeof substitute === "string" && substitute.trim()) {
+                rule.substitute_character = substitute.trim();
+            }
+
+            selectedEntities[entityKey] = rule;
         });
-
-        console.log('Final selected entities for API:', selectedEntities); // Debug log
-
-        // Check for potential conflicts
-        const selectedCount = Object.keys(selectedEntities).length;
-        if (selectedCount > 1) {
-            console.warn(`⚠️  Multiple entities selected (${selectedCount}). This may cause overlapping issues if they detect the same text patterns.`);
-            console.warn('Selected entities:', Object.keys(selectedEntities));
-        }
 
         return selectedEntities;
     };
+
 
     // Function to process and clean the downloaded file content
     const processDownloadedFile = async (blob) => {
@@ -256,15 +240,7 @@ const FeaturePage = ({ onProcess, className = "" }) => {
             }
 
             // Warning for multiple entity selection
-            if (Object.keys(selectedEntities).length > 3) {
-                const confirmed = window.confirm(
-                    t("You have selected many entities which may cause overlapping issues. Do you want to continue?")
-                );
-                if (!confirmed) {
-                    setIsProcessing(false);
-                    return;
-                }
-            }
+
 
             const formData = new FormData();
             formData.append("file", uploadedFile);

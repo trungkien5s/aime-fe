@@ -43,8 +43,8 @@ const DashboardPage = () => {
 
         setLicenseLoading(true);
         try {
-            const token = localStorage.getItem("token");
-            const response = await axios.get(`http://localhost:1234/license/generate-license
+            const token = localStorage.getItem("access_token");
+            const response = await axios.get(`https://aimemaskingdm.aimesoft.com/masking/backend/license/generate-license
 `, {
                 params: {
                     license_end_days: licenseDays
@@ -195,6 +195,10 @@ const DashboardPage = () => {
                                         <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                             Name
                                         </th>
+                                        {/*<th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">*/}
+                                        {/*    Password*/}
+                                        {/*</th>*/}
+
                                         <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">
                                             Role
                                         </th>
@@ -210,6 +214,7 @@ const DashboardPage = () => {
                                                 {account.username}
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{account.name}</td>
+                                            {/*<td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{account.password}</td>*/}
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <span
                                                     className={`inline-flex px-3 py-1 rounded-full text-xs font-semibold ${
@@ -219,6 +224,7 @@ const DashboardPage = () => {
                                                     {account.role}
                                                 </span>
                                             </td>
+
                                             <td className="px-6 py-4 whitespace-nowrap text-center">
                                                 <div className="flex justify-center space-x-2">
                                                     <button
@@ -337,13 +343,24 @@ const DashboardPage = () => {
                                         className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
                                     />
 
+                                    {/*<label className="block mb-2 text-sm">Password</label>*/}
+                                    {/*<input*/}
+                                    {/*    type="text"*/}
+                                    {/*    value={editForm.password}*/}
+                                    {/*    onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}*/}
+                                    {/*    className="w-full border border-gray-300 rounded px-3 py-2 mb-4"*/}
+                                    {/*/>*/}
+
                                     <label className="block mb-2 text-sm">Role</label>
-                                    <input
-                                        type="text"
+                                    <select
                                         value={editForm.role}
                                         onChange={(e) => setEditForm({ ...editForm, role: e.target.value })}
                                         className="w-full border border-gray-300 rounded px-3 py-2 mb-4"
-                                    />
+                                    >
+                                        <option value="user">User</option>
+                                        <option value="admin">Admin</option>
+                                    </select>
+
 
                                     <div className="flex justify-end gap-2">
                                         <button

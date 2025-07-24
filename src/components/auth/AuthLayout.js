@@ -82,40 +82,40 @@ const AuthLayout = ({ children, title }) => {
 
                     {/* Mobile: Language Switcher and Menu Button */}
                     <div className="lg:hidden flex items-center space-x-3">
-                        <LanguageSwitcher />
-                        <button
-                            onClick={toggleMobileMenu}
-                            className="p-2 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 text-white hover:bg-slate-700/50 transition-all duration-300"
-                            aria-label="Toggle mobile menu"
-                        >
-                            {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-                        </button>
+                        <LanguageSwitcher />s
+                        {/*<button*/}
+                        {/*    onClick={toggleMobileMenu}*/}
+                        {/*    className="p-2 rounded-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 text-white hover:bg-slate-700/50 transition-all duration-300"*/}
+                        {/*    aria-label="Toggle mobile menu"*/}
+                        {/*>*/}
+                        {/*    /!*{isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}*!/*/}
+                        {/*</button>*/}
                     </div>
                 </div>
 
                 {/* Mobile Navigation Menu */}
-                <div
-                    className={`lg:hidden transition-all duration-300 ease-in-out ${
-                        isMobileMenuOpen ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0 overflow-hidden"
-                    }`}
-                >
-                    <nav className="backdrop-blur-xl bg-slate-900/80 border border-slate-700/50 rounded-2xl p-4 space-y-3">
-                        {/*<Link*/}
-                        {/*    to="/"*/}
-                        {/*    className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl transition-all duration-300 font-medium"*/}
-                        {/*    onClick={() => setIsMobileMenuOpen(false)}*/}
-                        {/*>*/}
-                        {/*    {t('Home')}*/}
-                        {/*</Link>*/}
-                        {/*<a*/}
-                        {/*    href="#"*/}
-                        {/*    className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl transition-all duration-300 font-medium"*/}
-                        {/*    onClick={() => setIsMobileMenuOpen(false)}*/}
-                        {/*>*/}
-                        {/*    {t('Contact')}*/}
-                        {/*</a>*/}
-                    </nav>
-                </div>
+                {/*<div*/}
+                {/*    className={`lg:hidden transition-all duration-300 ease-in-out ${*/}
+                {/*        isMobileMenuOpen ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0 overflow-hidden"*/}
+                {/*    }`}*/}
+                {/*>*/}
+                {/*    <nav className="backdrop-blur-xl bg-slate-900/80 border border-slate-700/50 rounded-2xl p-4 space-y-3">*/}
+                {/*        /!*<Link*!/*/}
+                {/*        /!*    to="/"*!/*/}
+                {/*        /!*    className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl transition-all duration-300 font-medium"*!/*/}
+                {/*        /!*    onClick={() => setIsMobileMenuOpen(false)}*!/*/}
+                {/*        /!*>*!/*/}
+                {/*        /!*    {t('Home')}*!/*/}
+                {/*        /!*</Link>*!/*/}
+                {/*        /!*<a*!/*/}
+                {/*        /!*    href="#"*!/*/}
+                {/*        /!*    className="block px-4 py-3 text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-xl transition-all duration-300 font-medium"*!/*/}
+                {/*        /!*    onClick={() => setIsMobileMenuOpen(false)}*!/*/}
+                {/*        /!*>*!/*/}
+                {/*        /!*    {t('Contact')}*!/*/}
+                {/*        /!*</a>*!/*/}
+                {/*    </nav>*/}
+                {/*</div>*/}
             </div>
 
             {/* Main Content */}

@@ -116,7 +116,7 @@ const Header = () => {
 
                                     {/* Hover Dropdown Menu */}
                                     <div className="absolute right-0 mt-3 w-64 bg-white/95 backdrop-blur-md rounded-lg shadow-lg border border-blue-200 py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                                        <div className="px-4 py-3 border-b border-blue-200">
+                                        <div className="px-4 py-3 ">
                                             <div className="flex items-center space-x-3">
                                                 <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
         <span className="text-white font-semibold text-sm">
