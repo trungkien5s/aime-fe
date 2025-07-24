@@ -8,8 +8,8 @@ import './i18n'; //
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
-        {/*basename="/masking/app"*/}
-        <BrowserRouter >
+
+        <BrowserRouter basename="/masking/app" >
             <App />
         </BrowserRouter>
     </React.StrictMode>
