@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# AIME Mask
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application for data masking processing and management.
 
-## Available Scripts
+## System Requirements
 
-In the project directory, you can run:
+- Node.js (version 16.x or higher)
+- npm or yarn
+- Git
 
-### `npm start`
+## Installation and Running Guide
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Clone repository
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+git clone <repository-url>
+cd aime-mask
+```
 
-### `npm test`
+### 2. Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Using npm:
+```bash
+npm install
+```
 
-### `npm run build`
+Or using yarn:
+```bash
+yarn install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. Run application in development mode
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Or:
+```bash
+yarn start
+```
 
-### `npm run eject`
+The application will be launched at [http://localhost:3000](http://localhost:3000)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 4. Build for production
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Or:
+```bash
+yarn build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Build files will be created in the `build/` directory
 
-## Learn More
+### 5. Run tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+npm test
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Or:
+```bash
+yarn test
+```
 
-### Code Splitting
+## 🛠️ Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Frontend Framework
+- **React 19.1.0** - Main framework
+- **React Router DOM 6.22.3** - Navigation
+- **React Hook Form 7.60.0** - Form management
 
-### Analyzing the Bundle Size
+### UI/UX Libraries
+- **Ant Design 5.26.4** - Component library
+- **Tailwind CSS 3.4.1** - CSS framework
+- **Lucide React 0.525.0** - Icon library
+- **Sass 1.89.2** - CSS preprocessor
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### State Management & API
+- **TanStack React Query 5.82.0** - State management and caching
+- **Axios 1.10.0** - HTTP client
 
-### Making a Progressive Web App
+### Internationalization
+- **i18next 21.10.0** - Internationalization library
+- **react-i18next 11.18.6** - React integration for i18next
+- **i18next-browser-languagedetector 8.2.0** - Automatic language detection
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Form Validation & Utils
+- **Yup 1.6.1** - Schema validation
+- **@hookform/resolvers 5.1.1** - Form validation resolver
 
-### Advanced Configuration
+### Additional Features
+- **React Toastify 11.0.5** - Toast notifications
+- **React World Flags 1.6.0** - Country flags display
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Project Structure
 
-### Deployment
+```
+aime-mask/
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── locale/
+│   └── App.js
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Deployment Environment
 
-### `npm run build` fails to minify
+The application is configured to deploy at the `/masking/app` path (see `homepage` in package.json).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📦 Available Scripts
+
+- `npm start` - Run application in development mode
+- `npm run build` - Build application for production
+- `npm test` - Run test suite
+- `npm run eject` - Eject configuration (not recommended)
+
+## 🔧 Configuration
+
+### ESLint
+The project uses the default ESLint configuration from Create React App.
+
+### Browser Support
+- Development: Latest versions of Chrome, Firefox, Safari
+
+---
+
