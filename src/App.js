@@ -10,6 +10,7 @@ import { AuthProvider } from "./components/contexts/AuthContext";
 import AdminRoute from "./components/common/AdminRoute";
 
 import DashboardPage from "./pages/admin/dashboard/DashboardPage";
+import ManageFile from "./pages/admin/file/ManageFile";
 import ProtectedRoute from "./components/contexts/ProtectedRoute";
 import AddAccountPage from "./pages/admin/dashboard/AddAccountPage";
 import TestPage from "./pages/admin/test/TestPage"
@@ -69,6 +70,15 @@ function App() {
                             }
                         />
 
+
+                        <Route
+                            path="/admin/files"
+                            element={
+                                <AdminRoute>
+                                    <ManageFile />
+                                </AdminRoute>
+                            }
+                        />
                         <Route
                             path="/admin/add-account"
                             element={
@@ -77,8 +87,9 @@ function App() {
                                 </AdminRoute>
                             }
                         />
+
                         <Route
-                            path="/test"
+                            path="admin/test"
                             element={
                                 <AdminRoute>
                                     <TestPage />

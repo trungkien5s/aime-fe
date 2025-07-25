@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
-import { Home, Film, MessageSquare, Tags, Users, LogOut } from 'lucide-react'
+import { Home, Film, MessageSquare, Tags, Users, LogOut,File  } from 'lucide-react'
 import { useAuth } from "../../contexts/AuthContext";
 
 const sidebarLink = [
     { icon: <Users className="w-5 h-5" />, title: "Manage Accounts", url: "/admin" },
+    { icon: <File className="w-5 h-5" />, title: "Manage Files", url: "/admin/files" },
 ]
 
 const settingsLinks = [

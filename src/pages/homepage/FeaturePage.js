@@ -384,11 +384,10 @@ const FeaturePage = ({ onProcess, className = "" }) => {
                         whitelistFile={whitelistFile}
                         setWhitelistFile={setWhitelistFile}
                         isAuthenticated={isAuthenticated}
-                        language={language}
-                    />
-                    <ActionSection
                         debugMode={debugMode}
                         setDebugMode={setDebugMode}
+                    />
+                    <ActionSection
                         onMasking={handleMasking}
                         disabled={!uploadedFile || isProcessing}
                         isProcessing={isProcessing}

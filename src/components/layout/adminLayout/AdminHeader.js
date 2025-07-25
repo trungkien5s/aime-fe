@@ -38,6 +38,13 @@ const AdminHeader = () => {
                 <img src="/logo.png" alt="SecureAI Logo" className="h-10 w-auto cursor-pointer" />
             </Link>
 
+            {/* Navigation links */}
+            <nav className="hidden md:flex items-center space-x-6 text-sm font-medium text-blue-700 cursor-pointer">
+                <Link to="/admin/test" className="hover:underline">Test</Link>
+            </nav>
+
+
+
             {/* User Info */}
             <div className="relative user-menu">
                 <div className="flex items-center gap-2 cursor-pointer" onClick={toggleMenu}>
@@ -49,6 +56,8 @@ const AdminHeader = () => {
           </span>
                     <ChevronDown className="w-4 h-4 hidden sm:block text-blue-700" />
                 </div>
+
+
 
                 {menuVisible && (
                     <ul className="absolute right-0 mt-2 w-48 bg-white/95 backdrop-blur-md shadow-lg rounded-md z-50 border border-blue-200">

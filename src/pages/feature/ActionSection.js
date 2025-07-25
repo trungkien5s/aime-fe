@@ -28,20 +28,7 @@ const ActionSection = ({ debugMode, setDebugMode, onMasking, disabled, isProcess
             </h3>
 
             <div className="space-y-6">
-                <div className="flex items-center">
-                    <input
-                        type="checkbox"
-                        id="debug-mode"
-                        checked={debugMode}
-                        onChange={(e) => setDebugMode(e.target.checked)}
-                        disabled={isProcessing}
-                        className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 focus:ring-2 disabled:opacity-50"
-                    />
-                    <label htmlFor="debug-mode" className="ml-3 flex items-center text-gray-700">
-                        <Bug className="w-4 h-4 mr-2" />
-                        {t("Enable Debug Mode")}
-                    </label>
-                </div>
+
 
                 <button
                     onClick={onMasking}

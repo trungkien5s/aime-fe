@@ -301,7 +301,7 @@ const TestPage = ({ onProcess, className = "" }) => {
                 alert(t("Please select only one masking model (ChatGPT or Local Module)."));
                 return;
             } else if (chatGptEnabled) {
-                mask_model = "chat_gpt";
+                mask_model = "gpt";
             } else if (localModuleEnabled) {
                 mask_model = "local_model";
             } else {
