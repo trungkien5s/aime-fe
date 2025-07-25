@@ -98,10 +98,15 @@ const SignInPage = () => {
     const signInMutation = useMutation({
         mutationFn: signInUser,
         onSuccess: async (userData) => {
-            // Truyền toàn bộ response để login xử lý đúng
             await login(userData);
-            navigate("/home");
+
+            if (userData.role === "admin") {
+                navigate("/admin");
+            } else {
+                navigate("/home");
+            }
         },
+
         onError: (error) => {
             console.error("Sign in error:", error);
         }

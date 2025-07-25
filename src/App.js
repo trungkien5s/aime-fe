@@ -12,7 +12,7 @@ import AdminRoute from "./components/common/AdminRoute";
 import DashboardPage from "./pages/admin/dashboard/DashboardPage";
 import ProtectedRoute from "./components/contexts/ProtectedRoute";
 import AddAccountPage from "./pages/admin/dashboard/AddAccountPage";
-
+import TestPage from "./pages/admin/test/TestPage"
 // Tạo Query Client với cấu hình tùy chỉnh
 const queryClient = new QueryClient({
     defaultOptions: {
@@ -77,12 +77,11 @@ function App() {
                                 </AdminRoute>
                             }
                         />
-
                         <Route
-                            path="/admin/add-account"
+                            path="/test"
                             element={
                                 <AdminRoute>
-                                    <AddAccountPage />
+                                    <TestPage />
                                 </AdminRoute>
                             }
                         />
