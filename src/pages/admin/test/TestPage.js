@@ -4,7 +4,7 @@ import Header from '../../../components/layout/userLayout/Header'; // điều ch
 import Footer from '../../../components/layout/userLayout/Footer'; // điều chỉnh đường dẫn
 import {useAuth} from '../../../components/contexts/AuthContext';
 import FileUpload from '../../../pages/feature/FileUpload';
-import ActionSection from '../../../pages/feature/ActionSection';
+import ActionSectionTest from '../../../pages/feature/ActionSectionTest';
 import EntitiesSection from '../../../pages/feature/EntitiesSection';
 import WhitelistSection from '../../../pages/feature/WhitelistSection';
 
@@ -17,6 +17,8 @@ const TestPage = ({ onProcess, className = "" }) => {
     const [entitiesMeta, setEntitiesMeta] = useState({});
     const [profiles, setProfiles] = useState({});
     const [isProcessing, setIsProcessing] = useState(false);
+    const [chatGptEnabled, setChatGptEnabled] = useState(false);
+    const [localModuleEnabled, setLocalModuleEnabled] = useState(false);
 
     const { isAuthenticated } = useAuth();
     const { t } = useTranslation();
@@ -293,9 +295,25 @@ const TestPage = ({ onProcess, className = "" }) => {
             const debugParam = debugMode ? "?debug=true" : "";
             const token = localStorage.getItem("access_token");
 
+
+            let mask_model = null;
+            if (chatGptEnabled && localModuleEnabled) {
+                alert(t("Please select only one masking model (ChatGPT or Local Module)."));
+                return;
+            } else if (chatGptEnabled) {
+                mask_model = "chat_gpt";
+            } else if (localModuleEnabled) {
+                mask_model = "local_model";
+            } else {
+                alert(t("Please select a masking model to proceed."));
+                return;
+            }
+
+
+
             console.log('Uploading file for processing...'); // Debug log
 
-            const response = await fetch(`${API_URL}/mask_profile${debugParam}`, {
+            const response = await fetch(`${API_URL}/mask_profile${debugParam}?mask_model=${mask_model}`, {
                 method: "POST",
                 body: formData,
                 headers: {
@@ -385,10 +403,15 @@ const TestPage = ({ onProcess, className = "" }) => {
                         setWhitelistFile={setWhitelistFile}
                         isAuthenticated={isAuthenticated}
                         language={language}
-                    />
-                    <ActionSection
                         debugMode={debugMode}
                         setDebugMode={setDebugMode}
+                    />
+                    <ActionSectionTest
+                        debugMode={debugMode}
+                        chatGptEnabled={chatGptEnabled}
+                        setChatGptEnabled={setChatGptEnabled}
+                        localModuleEnabled={localModuleEnabled}
+                        setLocalModuleEnabled={setLocalModuleEnabled}
                         onMasking={handleMasking}
                         disabled={!uploadedFile || isProcessing}
                         isProcessing={isProcessing}

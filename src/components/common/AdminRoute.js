@@ -22,10 +22,6 @@ export default function AdminRoute({ children }) {
         return (
             <div className="min-h-screen bg-gray-900 flex items-center justify-center">
                 <div className="text-center">
-                    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-black font-bold text-2xl">M</span>
-                    </div>
-                    <div className="animate-spin rounded-full h-8 w-8 border-2 border-red-500 border-t-transparent mx-auto"></div>
                     <p className="text-white mt-4">Đang kiểm tra quyền truy cập...</p>
                 </div>
             </div>
