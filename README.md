@@ -66,7 +66,7 @@ Or:
 yarn test
 ```
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 ### Frontend Framework
 - **React 19.1.0** - Main framework
@@ -114,14 +114,14 @@ aime-mask/
 
 The application is configured to deploy at the `/masking/app` path (see `homepage` in package.json).
 
-## 📦 Available Scripts
+##  Available Scripts
 
 - `npm start` - Run application in development mode
 - `npm run build` - Build application for production
 - `npm test` - Run test suite
 - `npm run eject` - Eject configuration (not recommended)
 
-## 🔧 Configuration
+##  Configuration
 
 ### ESLint
 The project uses the default ESLint configuration from Create React App.
