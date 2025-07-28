@@ -4,8 +4,8 @@ A React application for data masking processing and management.
 
 ## System Requirements
 
-- Node.js (version 16.x or higher)
-- npm or yarn
+- React (19.1.0)
+- npm
 - Git
 
 ## Installation and Running Guide
