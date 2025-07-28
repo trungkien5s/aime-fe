@@ -253,7 +253,11 @@ const ManageFile = () => {
                                                 {file.fileSize}
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
-                                                {file.uploader}
+                                                <span
+                                                    className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-800"
+                                                >
+                                                    {file.uploader}
+                                                </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">
                                                 {formatDate(file.uploadTime)}
@@ -292,7 +296,6 @@ const ManageFile = () => {
                                                 <div>
                                                     <h3 className="font-semibold text-gray-900">{file.originalName}</h3>
                                                     <p className="text-sm text-gray-600">{file.fileType} • {file.fileSize}</p>
-                                                    <p className="text-xs text-gray-500 mt-1">{file.description}</p>
                                                 </div>
                                             </div>
                                             <div className="flex space-x-2">
@@ -312,7 +315,11 @@ const ManageFile = () => {
                                             </div>
                                         </div>
                                         <div className="flex justify-between items-center text-sm text-gray-600">
-                                            <span>Uploaded by: {file.uploader}</span>
+                                            <span
+                                                    className="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-gray-100 text-gray-800"
+                                                >
+                                                    Uploaded by: {file.uploader}
+                                                    </span>
                                             <span>{formatDate(file.uploadTime)}</span>
                                         </div>
                                     </div>

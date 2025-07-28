@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
-import { Home, Film, MessageSquare, Tags, Users, LogOut,File  } from 'lucide-react'
+import { Home, Film, MessageSquare, Tags, Users, LogOut,File, TestTube, Server  } from 'lucide-react'
 import { useAuth } from "../../contexts/AuthContext";
 
 const sidebarLink = [
     { icon: <Users className="w-5 h-5" />, title: "Manage Accounts", url: "/admin" },
     { icon: <File className="w-5 h-5" />, title: "Manage Files", url: "/admin/files" },
+    { icon: <Server className="w-5 h-5" />, title: "Test", url: "/admin/test" },
+
 ]
 
 const settingsLinks = [
@@ -57,8 +59,8 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
     }, [isMobile, sidebarOpen])
 
     const navLinkClass =
-        "flex items-center px-4 py-3 rounded-lg duration-300 text-gray-300 text-sm font-medium hover:bg-blue-600/30 hover:text-white transition-all no-underline group w-full"
-    const activeClass = "bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg no-underline"
+        "flex items-center px-4 py-3 rounded-lg duration-300 text-gray-300 text-sm font-medium hover:bg-white/10 hover:text-white transition-all no-underline group w-full"
+    const activeClass = "bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg no-underline"
 
     const closeSidebar = () => setSidebarOpen(false)
 
@@ -87,19 +89,6 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
             >
                 <div className="flex flex-col h-full">
                     {/* Mobile Header */}
-                    <div className="lg:hidden flex items-center justify-between h-16 px-4 border-b border-blue-800">
-                        <h1 className="text-white font-semibold text-lg">Menu</h1>
-                        <button
-                            onClick={closeSidebar}
-                            className="p-2 rounded-md text-white hover:bg-blue-700 transition-colors"
-                            aria-label="Close sidebar"
-                        >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
-
                     {/* Navigation */}
                     <div className="flex-1 flex flex-col px-4 py-6 overflow-y-auto">
                         <nav className="space-y-2">

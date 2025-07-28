@@ -35,8 +35,7 @@ const AdminLayout = ({ children }) => {
     return (
         <div className="min-h-screen bg-[#F3F4F6]">
             <AdminHeader setSidebarOpen={setSidebarOpen} />
-            <AdminSidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
-
+<AdminSidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
             <div className="lg:pl-64 pt-16">
                 <main className="py-4 lg:py-6">
                     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>

@@ -157,22 +157,21 @@ const DashboardPage = () => {
                         {/*>*/}
                         {/*    Export*/}
                         {/*</button>*/}
-                        <button
-                            onClick={openLicenseModal}
-                            className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200 text-sm font-medium"
-                        >
-                            <div className="flex items-center">
-                                <Key className="w-5 h-5 mr-2" />
-                                <span>Generate License</span>
-                            </div>
-
-                        </button>
-                        <button
-                            onClick={() => navigate("/admin/add-account")}
-                            className="px-4 py-2 bg-[#1e5eff] text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm font-medium"
-                        >
-                            + Add account
-                        </button>
+<div className="flex flex-col sm:flex-row gap-2 w-full">
+    <button
+        onClick={openLicenseModal}
+        className="w-full sm:w-auto px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200 text-sm font-medium flex items-center justify-center"
+    >
+        <Key className="w-5 h-5 mr-2" />
+        <span>Generate License</span>
+    </button>
+    <button
+        onClick={() => navigate("/admin/add-account")}
+        className="w-full sm:w-auto px-4 py-2 bg-[#1e5eff] text-white rounded-lg hover:bg-blue-600 transition-colors duration-200 text-sm font-medium"
+    >
+        + Add account
+    </button>
+</div>
                     </div>
                 </div>
 
@@ -314,13 +313,6 @@ const DashboardPage = () => {
                                                     }`}
                                                 >
                                                     {account.role}
-                                                </span>
-                                                <span
-                                                    className={`inline-flex px-2 py-1 rounded-full text-xs font-semibold ${
-                                                        account.isActive ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
-                                                    }`}
-                                                >
-                                                    {account.isActive ? "Active" : "Inactive"}
                                                 </span>
                                             </div>
                                         </div>
