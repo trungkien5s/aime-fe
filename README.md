@@ -13,7 +13,7 @@ A React application for data masking processing and management.
 ### 1. Clone repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/trungkien5s/aime-fe.git
 cd aime-mask
 ```
 
@@ -24,10 +24,6 @@ Using npm:
 npm install
 ```
 
-Or using yarn:
-```bash
-yarn install
-```
 
 ### 3. Run application in development mode
 
@@ -35,10 +31,6 @@ yarn install
 npm start
 ```
 
-Or:
-```bash
-yarn start
-```
 
 The application will be launched at [http://localhost:3000](http://localhost:3000)
 
@@ -48,22 +40,9 @@ The application will be launched at [http://localhost:3000](http://localhost:300
 npm run build
 ```
 
-Or:
-```bash
-yarn build
-```
 
 Build files will be created in the `build/` directory
 
-### 5. Run tests
-
-```bash
-npm test
-```
-
-Or:
-```bash
-yarn test
 ```
 
 ##  Technologies Used
