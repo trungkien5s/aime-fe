@@ -159,4 +159,4 @@ const AdminSidebar = ({ sidebarOpen, setSidebarOpen }) => {
     )
 }
 
-export default AdminSidebar
+export default AdminSidebar;

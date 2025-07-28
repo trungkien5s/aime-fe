@@ -24,8 +24,6 @@ const FeaturePage = ({ onProcess, className = "" }) => {
     const API_URL = process.env.REACT_APP_API_URL;
 
     // Fetch entities metadata from API
-    // Fetch entities metadata from API
-    // Fetch entities metadata from API
     const fetchEntitiesMeta = async () => {
         try {
             const token = localStorage.getItem("access_token");

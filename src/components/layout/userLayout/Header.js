@@ -26,7 +26,7 @@ const Header = () => {
             }
 
             const response = await axios.post(
-                `${apiURL}/auth/logout`,
+                `${apiURL}/logout`,
                 {},
                 {
                     headers: {
